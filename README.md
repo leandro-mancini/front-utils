@@ -10,3 +10,14 @@ Saiba como manipular todos os componentes como: Abas, Alertas, Barra de Progress
 
 ### Formulários
 Saiba como manipular os campos e grupos de formulários com o Front-utils.
+
+#### Instale usando Bower [bower](http://bower.io)
+
+Para instalar o Front-utils utilizando o Bower é bem simples:
+
+```sh
+$ bower install https://github.com/leandro-mancini/front-utils.git
+```
+
+### Documentação completa
+Mantemos a documentação completa dos componentes e como eles funcionam [aqui](http://leandromancini.com/front-utils/).
