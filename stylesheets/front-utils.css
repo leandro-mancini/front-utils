@@ -1,8 +1,12 @@
 /*!
- * GRID by Bootstrap v3.1.1 (http://getbootstrap.com)
- * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Front-utils Docs
+ * http://leandromancini.com/front-utils/
+ * 
+ * Github
+ * https://github.com/leandro-mancini/front-utils
  */
+
+
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
 @font-face {
@@ -1466,13 +1470,13 @@
         color: #df7775;
     }
 
-.ft-theme-blue [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-blue [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-blue [class*="ft-btn"].ft-btn-dark:active, .ft-theme-blue [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-blue [class*="ft-btn"].ft-btn-success:focus, .ft-theme-blue [class*="ft-btn"].ft-btn-success:hover, .ft-theme-blue [class*="ft-btn"].ft-btn-success:active, .ft-theme-blue [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-blue [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-blue [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-blue [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-blue [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-blue [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-blue [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-blue [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-blue [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-blue [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-blue [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-blue [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-blue [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-blue [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-blue [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-blue [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-blue [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-blue [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-blue [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-blue [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-blue [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -1924,13 +1928,13 @@
         color: #df7775;
     }
 
-.ft-theme-gold [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-gold [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-gold [class*="ft-btn"].ft-btn-dark:active, .ft-theme-gold [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-gold [class*="ft-btn"].ft-btn-success:focus, .ft-theme-gold [class*="ft-btn"].ft-btn-success:hover, .ft-theme-gold [class*="ft-btn"].ft-btn-success:active, .ft-theme-gold [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-gold [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-gold [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-gold [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-gold [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-gold [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-gold [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-gold [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-gold [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-gold [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-gold [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-gold [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-gold [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-gold [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-gold [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-gold [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-gold [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-gold [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-gold [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-gold [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-gold [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -2367,30 +2371,33 @@
 }
 
 .ft-theme-gray [class*="ft-btn"].ft-btn-danger, html [class*="ft-btn"].ft-btn-danger {
-    color: #d75553;
+    color: #fff;
+    background: #d75553;
+    border-color:#e33551;
 }
 
     .ft-theme-gray [class*="ft-btn"].ft-btn-danger:hover, html [class*="ft-btn"].ft-btn-danger:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-danger:focus, html [class*="ft-btn"].ft-btn-danger:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-danger:active, html [class*="ft-btn"].ft-btn-danger:active, .ft-theme-gray [class*="ft-btn"].ft-btn-danger.ft-active:not([data-ft-module="tabs"]), html [class*="ft-btn"].ft-btn-danger.ft-active:not([data-ft-module="tabs"]) {
-        background: #db6664;
-        border-color: #df7775;
+        background: #e33551;
+        border-color: #e33551;
         color: white;
     }
 
     .ft-theme-gray [class*="ft-btn"].ft-btn-danger.ft-disabled, html [class*="ft-btn"].ft-btn-danger.ft-disabled, .ft-theme-gray [class*="ft-btn"].ft-btn-danger.ft-disabled:focus, html [class*="ft-btn"].ft-btn-danger.ft-disabled:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-danger.ft-disabled:hover, html [class*="ft-btn"].ft-btn-danger.ft-disabled:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-danger.ft-disabled:active, html [class*="ft-btn"].ft-btn-danger.ft-disabled:active, .ft-theme-gray [class*="ft-btn"].ft-btn-danger.ft-disabled.ft-active, html [class*="ft-btn"].ft-btn-danger.ft-disabled.ft-active, .ft-theme-gray [class*="ft-btn"].ft-btn-danger[disabled], html [class*="ft-btn"].ft-btn-danger[disabled], .ft-theme-gray [class*="ft-btn"].ft-btn-danger[disabled]:focus, html [class*="ft-btn"].ft-btn-danger[disabled]:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-danger[disabled]:hover, html [class*="ft-btn"].ft-btn-danger[disabled]:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-danger[disabled]:active, html [class*="ft-btn"].ft-btn-danger[disabled]:active, .ft-theme-gray [class*="ft-btn"].ft-btn-danger[disabled].ft-active, html [class*="ft-btn"].ft-btn-danger[disabled].ft-active {
         background: #e5e5e5;
         border-color: #cccccc;
-        color: #df7775;
+        color: #999;
     }
 
-.ft-theme-gray [class*="ft-btn"].ft-btn-dark:focus, html [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-dark:hover, html [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-dark:active, html [class*="ft-btn"].ft-btn-dark:active, .ft-theme-gray [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]), html [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
-    background: #4c4c4c;
-    border-color: #666666;
+.ft-theme-gray [class*="ft-btn"].ft-btn-success:focus, html [class*="ft-btn"].ft-btn-success:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-success:hover, html [class*="ft-btn"].ft-btn-success:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-success:active, html [class*="ft-btn"].ft-btn-success:active, .ft-theme-gray [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]), html [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
+    background: #0f6c30;
+    border-color: #0f6c30;
     color: white;
 }
 
-.ft-theme-gray [class*="ft-btn"].ft-btn-dark.ft-disabled, html [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-gray [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, html [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, html [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-dark.ft-disabled:active, html [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-gray [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, html [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-gray [class*="ft-btn"].ft-btn-dark[disabled], html [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-gray [class*="ft-btn"].ft-btn-dark[disabled]:focus, html [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-dark[disabled]:hover, html [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-dark[disabled]:active, html [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-gray [class*="ft-btn"].ft-btn-dark[disabled].ft-active, html [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-gray [class*="ft-btn"].ft-btn-success.ft-disabled, html [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-gray [class*="ft-btn"].ft-btn-success.ft-disabled:focus, html [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-success.ft-disabled:hover, html [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-success.ft-disabled:active, html [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-gray [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, html [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-gray [class*="ft-btn"].ft-btn-success[disabled], html [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-gray [class*="ft-btn"].ft-btn-success[disabled]:focus, html [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-gray [class*="ft-btn"].ft-btn-success[disabled]:hover, html [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-gray [class*="ft-btn"].ft-btn-success[disabled]:active, html [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-gray [class*="ft-btn"].ft-btn-success[disabled].ft-active, html [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
+    text-shadow:none;
 }
 
 .ft-theme-gray .ft-btn:hover, html .ft-btn:hover, .ft-theme-gray .ft-btn:focus, html .ft-btn:focus, .ft-theme-gray .ft-btn:active, html .ft-btn:active, .ft-theme-gray .ft-btn.ft-active:not([data-ft-module="tabs"]), html .ft-btn.ft-active:not([data-ft-module="tabs"]) {
@@ -2404,17 +2411,17 @@
 .ft-theme-gray .ft-btn.ft-disabled, html .ft-btn.ft-disabled, .ft-theme-gray .ft-btn.ft-disabled:focus, html .ft-btn.ft-disabled:focus, .ft-theme-gray .ft-btn.ft-disabled:hover, html .ft-btn.ft-disabled:hover, .ft-theme-gray .ft-btn.ft-disabled:active, html .ft-btn.ft-disabled:active, .ft-theme-gray .ft-btn.ft-disabled.ft-active, html .ft-btn.ft-disabled.ft-active, .ft-theme-gray .ft-btn[disabled], html .ft-btn[disabled], .ft-theme-gray .ft-btn[disabled]:focus, html .ft-btn[disabled]:focus, .ft-theme-gray .ft-btn[disabled]:hover, html .ft-btn[disabled]:hover, .ft-theme-gray .ft-btn[disabled]:active, html .ft-btn[disabled]:active, .ft-theme-gray .ft-btn[disabled].ft-active, html .ft-btn[disabled].ft-active {
     background: #e5e5e5;
     border-color: #cccccc;
-    color: #7f7f7f;
+    color: #999;
 }
 
 .ft-theme-gray .ft-btn-primary, html .ft-btn-primary {
-    background: #6c6c6c;
-    border-color: #5e5e5e;
+    background: #00aff2;
+    border-color: #008abf;
 }
 
     .ft-theme-gray .ft-btn-primary:hover, html .ft-btn-primary:hover, .ft-theme-gray .ft-btn-primary:focus, html .ft-btn-primary:focus, .ft-theme-gray .ft-btn-primary:active, html .ft-btn-primary:active, .ft-theme-gray .ft-btn-primary.ft-active:not([data-ft-module="tabs"]), html .ft-btn-primary.ft-active:not([data-ft-module="tabs"]) {
-        background: #515151;
-        border-color: #515151;
+        background: #008abf;
+        border-color: #008abf;
         -moz-box-shadow: inset 0 3px 5px rgba(0,0,0,0.05);
         -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.05);
         box-shadow: inset 0 3px 5px rgba(0,0,0,0.05);
@@ -2840,13 +2847,13 @@ html .ft-theme-blue .ft-tabs-btn-nav .ft-active [class*="ft-btn"], .ft-theme-blu
         color: #df7775;
     }
 
-.ft-theme-light-green [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark:active, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-light-green [class*="ft-btn"].ft-btn-success:focus, .ft-theme-light-green [class*="ft-btn"].ft-btn-success:hover, .ft-theme-light-green [class*="ft-btn"].ft-btn-success:active, .ft-theme-light-green [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-light-green [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-light-green [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-light-green [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-light-green [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-light-green [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-light-green [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-light-green [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-light-green [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-light-green [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-light-green [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-light-green [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-light-green [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-light-green [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -3298,13 +3305,13 @@ html .ft-theme-blue .ft-tabs-btn-nav .ft-active [class*="ft-btn"], .ft-theme-blu
         color: #df7775;
     }
 
-.ft-theme-green [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-green [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-green [class*="ft-btn"].ft-btn-dark:active, .ft-theme-green [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-green [class*="ft-btn"].ft-btn-success:focus, .ft-theme-green [class*="ft-btn"].ft-btn-success:hover, .ft-theme-green [class*="ft-btn"].ft-btn-success:active, .ft-theme-green [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-green [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-green [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-green [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-green [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-green [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-green [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-green [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-green [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-green [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-green [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-green [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-green [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-green [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-green [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-green [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-green [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-green [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-green [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-green [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-green [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -3756,13 +3763,13 @@ html .ft-theme-blue .ft-tabs-btn-nav .ft-active [class*="ft-btn"], .ft-theme-blu
         color: #df7775;
     }
 
-.ft-theme-orange [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-orange [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-orange [class*="ft-btn"].ft-btn-dark:active, .ft-theme-orange [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-orange [class*="ft-btn"].ft-btn-success:focus, .ft-theme-orange [class*="ft-btn"].ft-btn-success:hover, .ft-theme-orange [class*="ft-btn"].ft-btn-success:active, .ft-theme-orange [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-orange [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-orange [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-orange [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-orange [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-orange [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-orange [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-orange [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-orange [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-orange [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-orange [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-orange [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-orange [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-orange [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-orange [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-orange [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-orange [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-orange [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-orange [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-orange [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-orange [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -4214,13 +4221,13 @@ html .ft-theme-blue .ft-tabs-btn-nav .ft-active [class*="ft-btn"], .ft-theme-blu
         color: #df7775;
     }
 
-.ft-theme-wine [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-wine [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-wine [class*="ft-btn"].ft-btn-dark:active, .ft-theme-wine [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-wine [class*="ft-btn"].ft-btn-success:focus, .ft-theme-wine [class*="ft-btn"].ft-btn-success:hover, .ft-theme-wine [class*="ft-btn"].ft-btn-success:active, .ft-theme-wine [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-wine [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-wine [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-wine [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-wine [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-wine [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-wine [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-wine [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-wine [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-wine [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-wine [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-wine [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-wine [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-wine [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-wine [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-wine [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-wine [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-wine [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-wine [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-wine [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-wine [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -4672,13 +4679,13 @@ html .ft-theme-blue .ft-tabs-btn-nav .ft-active [class*="ft-btn"], .ft-theme-blu
         color: #df7775;
     }
 
-.ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark:active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-cyanogen [class*="ft-btn"].ft-btn-success:focus, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success:hover, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success:active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-cyanogen [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-cyanogen [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -5130,13 +5137,13 @@ html .ft-theme-blue .ft-tabs-btn-nav .ft-active [class*="ft-btn"], .ft-theme-blu
         color: #df7775;
     }
 
-.ft-theme-light-red [class*="ft-btn"].ft-btn-dark:focus, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark:hover, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark:active, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark.ft-active:not([data-ft-module="tabs"]) {
+.ft-theme-light-red [class*="ft-btn"].ft-btn-success:focus, .ft-theme-light-red [class*="ft-btn"].ft-btn-success:hover, .ft-theme-light-red [class*="ft-btn"].ft-btn-success:active, .ft-theme-light-red [class*="ft-btn"].ft-btn-success.ft-active:not([data-ft-module="tabs"]) {
     background: #4c4c4c;
     border-color: #666666;
     color: white;
 }
 
-.ft-theme-light-red [class*="ft-btn"].ft-btn-dark.ft-disabled, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark.ft-disabled:focus, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark.ft-disabled:hover, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark.ft-disabled:active, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark.ft-disabled.ft-active, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark[disabled], .ft-theme-light-red [class*="ft-btn"].ft-btn-dark[disabled]:focus, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark[disabled]:hover, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark[disabled]:active, .ft-theme-light-red [class*="ft-btn"].ft-btn-dark[disabled].ft-active {
+.ft-theme-light-red [class*="ft-btn"].ft-btn-success.ft-disabled, .ft-theme-light-red [class*="ft-btn"].ft-btn-success.ft-disabled:focus, .ft-theme-light-red [class*="ft-btn"].ft-btn-success.ft-disabled:hover, .ft-theme-light-red [class*="ft-btn"].ft-btn-success.ft-disabled:active, .ft-theme-light-red [class*="ft-btn"].ft-btn-success.ft-disabled.ft-active, .ft-theme-light-red [class*="ft-btn"].ft-btn-success[disabled], .ft-theme-light-red [class*="ft-btn"].ft-btn-success[disabled]:focus, .ft-theme-light-red [class*="ft-btn"].ft-btn-success[disabled]:hover, .ft-theme-light-red [class*="ft-btn"].ft-btn-success[disabled]:active, .ft-theme-light-red [class*="ft-btn"].ft-btn-success[disabled].ft-active {
     background: #bfbfbf;
     border-color: #a5a5a5;
 }
@@ -7537,7 +7544,7 @@ p {
     cursor: pointer;
     border: 1px solid #b2b2b2;
     padding: 6px 11px 7px;
-    border-radius: 4px;
+    /*border-radius: 4px;*/
     background-color: white;
     display: inline-block;
     font-size: 13px;
@@ -7582,17 +7589,19 @@ p + [class*="ft-btn"] {
     color: white;
 }
 
-.ft-btn-dark {
-    background-color: #888888;
-    border-color: #555555;
-    color: #eeeeee;
+.ft-btn-success {
+    background-color: #149040;
+    border-color: #127e38;
+    color: #fff;
+
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
 }
 
-    .ft-btn-dark:hover, .ft-btn-dark:focus {
+    .ft-btn-success:hover, .ft-btn-success:focus {
         background-color: #555555;
     }
 
-    .ft-btn-dark[data-ft-module]:after {
+    .ft-btn-success[data-ft-module]:after {
         border-top-color: #eeeeee;
     }
 

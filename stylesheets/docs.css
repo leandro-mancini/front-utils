@@ -354,6 +354,7 @@ ol {
 .doc-content>.row>.col-md-9 {
   margin-bottom:50px;
   border-left:1px solid #e5e5e5;
+  padding: 0 0 0 35px;
 }
 
 .ft-window-xs .doc-content {
@@ -605,7 +606,7 @@ p code {
 .doc-sidebar-menu .ft-btn,
 .doc-sidebar-menu .ft-btn-primary,
 .doc-sidebar-menu .ft-btn-danger{
-  margin: 0 15px 20px;
+  margin: 0 0 20px;
   display: block;
 }
 
