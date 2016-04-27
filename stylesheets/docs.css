@@ -601,6 +601,7 @@ p code {
 
 .doc-sidebar{
   padding-right:0 !important;
+  padding-left:0 !important;
 }
 
 .doc-sidebar-menu .ft-btn,
