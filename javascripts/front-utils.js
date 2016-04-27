@@ -2089,11 +2089,13 @@ frontutils.form = (function () {
     var config = {
         selectors: {
             disable: '.ft-form-disable',
-            text: '.ft-form-text'
+            text: '.ft-form-text',
+            blank: '.ft-valid'
         }
     };
 
     function init() {
+        unbind();
         formDisable();
         formText();
         masks();
@@ -2101,6 +2103,44 @@ frontutils.form = (function () {
         prefixSufix();
         togglePasswordField();
         textareaHeight();
+        checkBlank();
+    }
+
+    function checkBlank(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('button[data-valid="form"]').on('click', function(e){
+                var vCheck = true;
+                var _return = $(this).data("return");
+                var _valid = $(this).parents('.ft-form[data-ft-module="form"]').find('.ft-valid');
+
+                $.each(_valid, function(i, item){
+                    if ($(item).val() === '') {
+                        vCheck = false;
+
+                        $(item).parent().addClass('ft-error');
+                    } else {
+                        $(item).parent().removeClass('ft-error');
+                    }
+                });
+
+                if (!vCheck) {
+                    frontutils.modal.alert({title: "Atenção!", content: "Preencha todos os campos em vermelho."});
+                } else{
+                    activateForm(this);
+
+                    return _return;
+                }
+
+                return false;
+            });
+        });
+    }
+
+    // activates the flap in accordance with the received arguments
+    function activateForm(el) {
+        $(el).trigger('form:send');
     }
 
     function prefixSufix() {
@@ -2199,8 +2239,14 @@ frontutils.form = (function () {
         });
     }
 
+    // remove binds added by the module itself
+    function unbind() {
+        $('[data-ft-module=form]').off('click.ls');
+    }
+
     return {
         init: init,
+        unbind: unbind,
         togglePasswordField: togglePasswordField
     };
 
