@@ -2104,6 +2104,324 @@ frontutils.form = (function () {
         togglePasswordField();
         textareaHeight();
         checkBlank();
+        validDate();
+        validCNPJ();
+        validaCPF();
+        validaRG();
+        validarEmail();
+        changeCEP();
+    }
+
+    function changeCEP(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('.ft-get-cep').on('keyup', function(e){
+                var campo = $(e.currentTarget);
+                var endereco = campo.data("endereco");
+                var numero = campo.data("numero");
+                var bairro = campo.data("bairro");
+                var estado = campo.data("estado");
+                var cidade = campo.data("cidade");
+                
+                if (campo.val().length==9) {
+
+                    if ($.trim(campo.val()) != "") {
+                        $.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep=" + campo.val(), function () {
+                            if (resultadoCEP["resultado"] != 0) {
+                                campo.parents('.ft-form').find('#'+ endereco +'').val(unescape(resultadoCEP["tipo_logradouro"]) + ' ' + unescape(resultadoCEP["logradouro"]));
+                                campo.parents('.ft-form').find('#'+ bairro +'').val(unescape(resultadoCEP["bairro"]));
+                                campo.parents('.ft-form').find('#'+ estado +'').val(unescape(resultadoCEP["uf"]));
+                                campo.parents('.ft-form').find('#'+ cidade +'').val(unescape(resultadoCEP["cidade"]));
+
+                                campo.parents('.ft-form').find('#'+ numero +'').focus();
+                            } else {
+                                campo.parents('.ft-form').find('#'+ endereco +'').val('');
+                                campo.parents('.ft-form').find('#'+ bairro +'').val('');
+                                campo.parents('.ft-form').find('#'+ estado +'').val('');
+                                campo.parents('.ft-form').find('#'+ cidade +'').val('');
+
+                                frontutils.modal.alert({ title: "Atenção!", content: "Ops! CEP não encontrado! Verifique novamente ou entre com os dados manualmente." });
+                            }
+                        });
+                    }
+
+                }
+
+            });
+        });
+    }
+
+    function validarEmail(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('.ft-valid-email').on('blur', function(e){
+                var campo = $(e.currentTarget);
+                
+                if (!checkEmail(campo)) {
+
+                    frontutils.modal.alert({title: "Atenção!", content: "Ops! E-mail invalido!"});
+                    campo.val('');
+                }
+
+            });
+        });
+    }
+
+    function checkEmail(obj){
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($(obj).val())) return true;
+        else return false
+    }
+
+    function validaRG(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('.ft-valid-rg').on('blur', function(e){
+                var campo = $(e.currentTarget);
+                var numero = campo.val();
+
+                // if (numero.length == 12) {
+                    numero = numero.replace('-', '');
+                    numero = numero.replace(/\./g, '');
+                    numero = numero.split("");
+
+                    var tamanho = numero.length;
+                    var vetor = new Array(tamanho);
+
+                    if(tamanho>=1)
+                    {
+                        vetor[0] = parseInt(numero[0]) * 2; 
+                    }
+                    if(tamanho>=2){
+                        vetor[1] = parseInt(numero[1]) * 3; 
+                    }
+                    if(tamanho>=3){
+                        vetor[2] = parseInt(numero[2]) * 4; 
+                    }
+                    if(tamanho>=4){
+                        vetor[3] = parseInt(numero[3]) * 5; 
+                    }
+                    if(tamanho>=5){
+                        vetor[4] = parseInt(numero[4]) * 6; 
+                    }
+                    if(tamanho>=6){
+                        vetor[5] = parseInt(numero[5]) * 7; 
+                    }
+                    if(tamanho>=7){
+                        vetor[6] = parseInt(numero[6]) * 8; 
+                    }
+                    if(tamanho>=8){
+                        vetor[7] = parseInt(numero[7]) * 9; 
+                    }
+                    if(tamanho>=9){
+                        vetor[8] = parseInt(numero[8]) * 100; 
+                    }
+
+                    var total = 0;
+
+                    if(tamanho>=1){
+                        total += vetor[0];
+                    }
+                    if(tamanho>=2){
+                        total += vetor[1]; 
+                    }
+                    if(tamanho>=3){
+                        total += vetor[2]; 
+                    }
+                    if(tamanho>=4){
+                        total += vetor[3]; 
+                    }
+                    if(tamanho>=5){
+                        total += vetor[4]; 
+                    }
+                    if(tamanho>=6){
+                        total += vetor[5]; 
+                    }
+                    if(tamanho>=7){
+                        total += vetor[6];
+                    }
+                    if(tamanho>=8){
+                        total += vetor[7]; 
+                    }
+                    if(tamanho>=9){
+                        total += vetor[8]; 
+                    }
+
+
+                    var resto = total % 11;
+
+                    if(resto!=0){
+                        campo.val('');
+                        frontutils.modal.alert({title: "Atenção!", content: "Ops! RG Inválido!"});
+                    }
+                // }
+
+            });
+        });
+    }
+
+    function validaCPF(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('.ft-valid-cpf').on('keyup', function(e){
+                var campo = $(e.currentTarget);
+                var cpf = campo.val();
+                var numeros;
+                var digitos;
+                var soma;
+                var i;
+                var resultado;
+                var digitos_iguais;
+
+                if (cpf.length == 14) {
+                    cpf = cpf.replace('-', '');
+                    cpf = cpf.replace(/\./g, '');
+
+                    digitos_iguais = 1;
+
+                    if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" || cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" || cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" || cpf == "88888888888" || cpf == "99999999999"){
+                        frontutils.modal.alert({title: "Atenção!", content: "Ops! CPF invalido!"});
+                        $(campo).val('');
+                        return false;
+                    }            
+
+                    if (cpf.length < 11){
+                        frontutils.modal.alert({title: "Atenção!", content: "Ops! CPF invalido!"});
+                        $(campo).val('');
+
+                        return false;
+                    }
+
+                    for (i = 0; i < cpf.length - 1; i++){
+                        if (cpf.charAt(i) != cpf.charAt(i + 1)) {
+                            digitos_iguais = 0;
+                            
+                            break;
+                        }    
+                    }
+
+                    if(!digitos_iguais){
+                        numeros = cpf.substring(0,9);
+                        digitos = cpf.substring(9);
+                        soma = 0;
+
+                        for (i = 10; i > 1; i--){
+                            soma += numeros.charAt(10 - i) * i;
+                        }
+                        
+                        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+
+                        if (resultado != digitos.charAt(0)){
+                            frontutils.modal.alert({title: "Atenção!", content: "Ops! CPF invalido!"});
+                            $(campo).val('');
+
+                            return false;    
+                        }
+                        
+                        numeros = cpf.substring(0,10);
+                        soma = 0;
+
+                        for (i = 11; i > 1; i--){
+                            soma += numeros.charAt(11 - i) * i;    
+                        }
+                        
+                        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+
+                        if (resultado != digitos.charAt(1)){
+                            frontutils.modal.alert({title: "Atenção!", content: "Ops! CPF invalido!"});
+                            $(campo).val('');
+                            
+                            return false;
+                        }
+                        
+                        return true;
+                    } 
+                }
+            });
+        });
+    }
+
+    function validCNPJ(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('.ft-valid-cnpj').on('keyup', function(e){
+                var campo = $(e.currentTarget);
+                var cnpj = campo.val();
+
+                if(cnpj.length == 18){
+                    if(cnpj.length < 18){
+                        frontutils.modal.alert({ title: "Alerta!", content: "Ops! CNPJ Invalido!" });
+
+                        campo.val('');
+                    } else{
+
+                        var valida = new Array(6,5,4,3,2,9,8,7,6,5,4,3,2);
+                        var dig1 = new Number;
+                        var dig2 = new Number;
+
+                        var exp = /\.|\-|\//g
+                        cnpj = cnpj.toString().replace( exp, "" ); 
+                        var digito = new Number(eval(cnpj.charAt(12)+cnpj.charAt(13)));
+
+                        for(var i = 0; i<valida.length; i++){
+                            dig1 += (i>0? (cnpj.charAt(i-1)*valida[i]):0);  
+                            dig2 += cnpj.charAt(i)*valida[i];       
+                        }
+                        dig1 = (((dig1%11)<2)? 0:(11-(dig1%11)));
+                        dig2 = (((dig2%11)<2)? 0:(11-(dig2%11)));
+
+                        if(((dig1*10)+dig2) != digito)  {
+                            frontutils.modal.alert({ title: "Alerta!", content: "Ops! CNPJ Invalido!" });
+
+                            campo.val('');
+                        }
+
+                    }
+                }
+
+            });
+        });
+    }
+
+    function validDate(){
+        $($('.ft-form[data-ft-module="form"]')).each(function (indexContainer, container) {
+            var $container = $(container);
+
+            $container.find('.ft-valid-date').on('keyup', function(e){
+                var date = $(this).val();
+                var ardt = new Array;
+                var ExpReg = new RegExp("(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[12][0-9]{3}");
+                var erro = false;
+
+                if (date.length == 10) {
+                    ardt = date.split("/");
+
+                    if ( date.search(ExpReg)==-1){
+                        erro = true;
+                        }
+                    else if (((ardt[1]==4)||(ardt[1]==6)||(ardt[1]==9)||(ardt[1]==11))&&(ardt[0]>30))
+                        erro = true;
+                    else if ( ardt[1]==2) {
+                        if ((ardt[0]>28)&&((ardt[2]%4)!=0))
+                            erro = true;
+                        if ((ardt[0]>29)&&((ardt[2]%4)==0))
+                            erro = true;
+                    }
+                    if (erro) {
+                        frontutils.modal.alert({title: "Atenção!", content: "Ops! O campo Data não é uma data válida!"});
+                        $(this).val('');
+
+                        return false;
+                    }
+
+                    return true;
+                }
+            });
+        });
     }
 
     function checkBlank(){
@@ -2182,7 +2500,7 @@ frontutils.form = (function () {
     }
 
     function masks() {
-        $('.ft-mask-date').mask('11/11/1111');
+        $('.ft-mask-date').mask('00/00/0000');
         $('.ft-mask-time').mask('00:00:00');
         $('.ft-mask-date_time').mask('00/00/0000 00:00:00');
         $('.ft-mask-cep').mask('00000-000');
@@ -2190,6 +2508,7 @@ frontutils.form = (function () {
         $('.ft-mask-phone9').mask('00009-0000');
         $('.ft-mask-phone8_with_ddd').mask('(00) 0000-0000');
         $('.ft-mask-phone9_with_ddd').mask('(00) 00009-0000');
+        $('.ft-mask-rg').mask('00.000.000-0', { reverse: true });
         $('.ft-mask-cpf').mask('000.000.000-00', { reverse: true });
         $('.ft-mask-cnpj').mask('00.000.000/0000-00', { reverse: true });
         $('.ft-mask-money').mask("#.##0,00", { reverse: true, maxlength: false });
