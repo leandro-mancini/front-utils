@@ -3682,6 +3682,8 @@ frontutils.form = (function () {
                         $(this).val('');
 
                         return false;
+                    } else{
+                        ativateData(this);
                     }
 
                     return true;
@@ -3720,6 +3722,10 @@ frontutils.form = (function () {
                 return false;
             });
         });
+    }
+
+    function ativateData(el){
+        $(el).trigger('form:date');
     }
 
     // activates the flap in accordance with the received arguments
@@ -4190,6 +4196,62 @@ frontutils.modal = (function () {
         alert: alert,
         close: close,
         unbind: unbind
+    };
+
+}());
+
+frontutils.animate = (function () {
+    'use strict';
+
+    var config = {
+        window: window,
+        classes: {
+            animateClass: '.ft-animate',
+            animateIn: 'ft-animate-in',
+            animate: 'animate'
+        }
+    };
+
+    function init() {
+        $(config.window).on('scroll resize', check_if_in_view);
+        $(config.window).trigger('scroll');
+    }
+
+    function check_if_in_view(){
+        var window_height = $(config.window).height();
+        var window_top_position = $(config.window).scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($(config.classes.animateClass), function() {
+            var $element = $(this);
+            var element_animate = $element.data(config.classes.animate);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            //check to see if this current container is within viewport
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                $element.addClass(config.classes.animateIn).addClass(element_animate);
+
+                callbackAnimateIn(this);
+            } else {
+                $element.removeClass(config.classes.animateIn).removeClass(element_animate);
+
+                callbackAnimateOut(this);
+            }
+        });
+    }
+
+    function callbackAnimateIn(el){
+        $(el).trigger('animate-in:callback');
+    }
+
+    function callbackAnimateOut(el){
+        $(el).trigger('animate-out:callback');
+    }
+
+    return {
+        init: init
     };
 
 }());

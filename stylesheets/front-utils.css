@@ -7,7 +7,7 @@
  */
 
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 
 @font-face {
     font-family: "front-utils";
@@ -17504,7 +17504,7 @@ table.tablesaw {
 
 .tablesaw-advance .btn.btn-micro {
   font-size: .8125em;
-  padding: .3em .7em .25em .7em;
+  padding: 0;
 }
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn {
@@ -17529,8 +17529,8 @@ table.tablesaw {
 }
 
 .tablesaw-bar .tablesaw-advance a.tablesaw-nav-btn.down:before {
-  left: .5em;
-  top: .65em;
+  left: 5px;
+  top: 8px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #808080;
